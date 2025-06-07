@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![AGROCOLMETEO Banner](https://via.placeholder.com/800x200/4ade80/ffffff?text=AGROCOLMETEO+%7C+AgTech+Platform)
+
 
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
@@ -23,7 +23,7 @@
 <div align="center">
 
 ### 🚀 **Demo en Vivo** | 📊 **Panel Admin** | 📱 **API Docs**
-*[Agregar enlaces cuando estén disponibles]*
+
 
 </div>
 
@@ -219,26 +219,6 @@ NEXT_PUBLIC_STRAPI_URL=http://localhost:1337
 | ✅ **UI/UX Design** | Tailwind + Framer Motion | 🟢 Avanzado |
 | ✅ **Business Logic** | E-commerce Funcional | 🟢 Avanzado |
 
-</div>
-
----
-
-## 📸 Screenshots
-
-<div align="center">
-
-### 🏠 Landing Page
-![Landing](https://via.placeholder.com/600x300/4ade80/ffffff?text=Landing+Page+Screenshot)
-
-### 📱 Catálogo de Productos  
-![Catálogo](https://via.placeholder.com/600x300/3b82f6/ffffff?text=Product+Catalog+Screenshot)
-
-### 🔧 Panel Administrativo
-![Admin](https://via.placeholder.com/600x300/8b5cf6/ffffff?text=Admin+Panel+Screenshot)
-
-</div>
-
----
 
 ## 🤝 Contribuciones
 
