@@ -216,7 +216,7 @@ AGROCOLMETEO/
 - **📧 Email**: brrojas.h14@gmail.com
 - **🐙 GitHub**: [@brrojash](https://github.com/brrojash)
 - **📍 Ubicación**: Bogotá, Colombia
-- **💼 LinkedIn**: [bryán-rojas](#) *(disponible bajo solicitud)*
+
 
 ## 📝 Notas para Reclutadores
 
