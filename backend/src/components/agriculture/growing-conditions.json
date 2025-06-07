@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_agriculture_growing_conditions",
+  "info": {
+    "displayName": "Growing Conditions",
+    "icon": "seed"
+  },
+  "options": {},
+  "attributes": {
+    "temperature_min": {
+      "type": "integer"
+    },
+    "humidity_min": {
+      "type": "integer"
+    },
+    "temperature_max": {
+      "type": "integer"
+    },
+    "humidity_max": {
+      "type": "integer"
+    },
+    "ph_min": {
+      "type": "decimal",
+      "min": 0,
+      "max": 14
+    },
+    "ph_max": {
+      "type": "decimal",
+      "min": 0,
+      "max": 14
+    },
+    "light_hours": {
+      "type": "integer",
+      "min": 0,
+      "max": 24
+    }
+  },
+  "config": {}
+}

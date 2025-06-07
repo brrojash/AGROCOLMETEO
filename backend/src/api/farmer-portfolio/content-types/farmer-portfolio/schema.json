@@ -1,0 +1,95 @@
+{
+  "kind": "collectionType",
+  "collectionName": "farmer_portfolios",
+  "info": {
+    "singularName": "farmer-portfolio",
+    "pluralName": "farmer-portfolios",
+    "displayName": "Farmer Portfolio"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "farm_name": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "farm_size": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    },
+    "farm_type": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "agricultura_tradicional",
+        "cultivos_hidroponicos",
+        "agricultura_mixta",
+        "ganaderia",
+        "fruticultura"
+      ]
+    },
+    "crops_grown": {
+      "type": "json"
+    },
+    "technology_adoption": {
+      "type": "enumeration",
+      "default": "medio",
+      "enum": [
+        "bajo",
+        "medio",
+        "alto"
+      ]
+    },
+    "years_experience": {
+      "type": "integer",
+      "min": 0
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    },
+    "testimonial": {
+      "type": "text"
+    },
+    "success_metrics": {
+      "type": "json"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hydroponic_systems",
+  "info": {
+    "singularName": "hydroponic-system",
+    "pluralName": "hydroponic-systems",
+    "displayName": "Hydroponic System"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "short_description": {
+      "type": "text",
+      "maxLength": 300
+    },
+    "price": {
+      "type": "decimal",
+      "min": 0
+    },
+    "system_type": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "NFT",
+        "DWC",
+        "Ebb_and_Flow",
+        "Aeroponics",
+        "Drip_System"
+      ]
+    },
+    "capacity": {
+      "type": "integer",
+      "required": true,
+      "min": 1
+    },
+    "target_crop": {
+      "type": "enumeration",
+      "default": "mixto",
+      "enum": [
+        "lechugas",
+        "hierbas_aromaticas",
+        "tomates_cherry",
+        "pimientos",
+        "fresas",
+        "mixto"
+      ]
+    },
+    "ai_embedded": {
+      "type": "boolean",
+      "default": true
+    },
+    "ai_features_included": {
+      "type": "json"
+    },
+    "autonomous_operation": {
+      "type": "boolean",
+      "default": true
+    },
+    "internal_sensors": {
+      "type": "json"
+    },
+    "automation_features": {
+      "type": "json"
+    },
+    "components_included": {
+      "type": "json"
+    },
+    "dimensions": {
+      "type": "component",
+      "component": "shared.dimensions",
+      "repeatable": false
+    },
+    "water_tank_capacity": {
+      "type": "integer"
+    },
+    "power_consumption": {
+      "type": "integer"
+    },
+    "monthly_energy_cost": {
+      "type": "decimal"
+    },
+    "estimated_yield": {
+      "type": "json"
+    },
+    "featured_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "assembly_manual": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    },
+    "installation_included": {
+      "type": "boolean",
+      "default": true
+    },
+    "warranty_months": {
+      "type": "integer",
+      "default": 36,
+      "min": 0
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "available": {
+      "type": "boolean",
+      "default": true
+    },
+    "stock": {
+      "type": "integer",
+      "default": 5,
+      "min": 0
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "applications": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::agricultural-application.agricultural-application",
+      "mappedBy": "hydroponic_systems"
+    }
+  }
+}

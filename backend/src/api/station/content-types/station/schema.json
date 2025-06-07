@@ -1,0 +1,161 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stations",
+  "info": {
+    "singularName": "station",
+    "pluralName": "stations",
+    "displayName": "Station"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "short_description": {
+      "type": "text",
+      "maxLength": 300
+    },
+    "product_type": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "estacion_completa",
+        "sensor_individual"
+      ]
+    },
+    "price": {
+      "type": "decimal",
+      "default": 1600000,
+      "min": 0,
+      "max": 1600000
+    },
+    "sensor_type": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "completa",
+        "pluviometro",
+        "anemometro",
+        "veleta",
+        "termometro_humedad",
+        "luxometro",
+        "barometro"
+      ]
+    },
+    "subscription_price": {
+      "type": "decimal",
+      "default": 80000,
+      "min": 0
+    },
+    "microcontroller": {
+      "type": "string",
+      "default": "ESP32-WROOM-32D"
+    },
+    "monitoring_accuracy": {
+      "type": "decimal",
+      "default": 99.8,
+      "min": 0,
+      "max": 100
+    },
+    "data_frequency": {
+      "type": "enumeration",
+      "enum": [
+        "cada_1_minuto",
+        "cada_5_minutos",
+        "cada_10_minutos",
+        "cada_15_minutos"
+      ]
+    },
+    "subscription_available": {
+      "type": "boolean",
+      "default": true
+    },
+    "storage_capacity": {
+      "type": "string",
+      "default": "Default value: 30 días local + nube ilimitada"
+    },
+    "connectivity": {
+      "type": "json"
+    },
+    "sensors_included": {
+      "type": "json"
+    },
+    "smart_features": {
+      "type": "json"
+    },
+    "installation_included": {
+      "type": "boolean",
+      "default": true
+    },
+    "warranty_months": {
+      "type": "integer"
+    },
+    "featured_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "technical_documentation": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "dimensions": {
+      "type": "component",
+      "component": "shared.dimensions",
+      "repeatable": false
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "available": {
+      "type": "boolean",
+      "default": true
+    },
+    "stock": {
+      "type": "integer",
+      "default": 10,
+      "min": 0
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": true
+    },
+    "applications": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::agricultural-application.agricultural-application",
+      "mappedBy": "stations"
+    }
+  }
+}

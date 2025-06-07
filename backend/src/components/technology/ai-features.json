@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_technology_ai_features",
+  "info": {
+    "displayName": "AI Features",
+    "icon": "database"
+  },
+  "options": {},
+  "attributes": {
+    "model_type": {
+      "type": "enumeration",
+      "enum": [
+        "LSTM",
+        "GRU",
+        "CNN",
+        "Ensemble"
+      ]
+    },
+    "bidirectional": {
+      "type": "boolean",
+      "default": true
+    },
+    "ensemble_models": {
+      "type": "boolean",
+      "default": true
+    },
+    "training_accuracy": {
+      "type": "decimal",
+      "default": 68,
+      "min": 0,
+      "max": 100
+    },
+    "features": {
+      "type": "json"
+    }
+  },
+  "config": {}
+}
