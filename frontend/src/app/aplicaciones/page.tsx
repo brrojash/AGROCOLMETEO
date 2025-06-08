@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowLeft, Brain, TrendingUp, AlertTriangle, Droplets, Thermometer, Bug, Zap, CheckCircle, Star, ArrowRight } from 'lucide-react'
+import { ArrowLeft, Brain, TrendingUp, Droplets, Thermometer, Bug, Zap, CheckCircle, Star, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
 interface AgriculturalApplication {
@@ -54,7 +54,9 @@ export default function AplicacionesPage() {
   useEffect(() => {
     const fetchApplications = async () => {
       try {
-        const response = await           fetch(`http://localhost:1337/api/agricultural-applications?populate=*`)
+        // Cambiar a variable de entorno para producción
+        const apiUrl = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337'
+        const response = await fetch(`${apiUrl}/api/agricultural-applications?populate=*`)
         const data = await response.json()
         setApplications(data.data)
         setLoading(false)
@@ -319,5 +321,3 @@ export default function AplicacionesPage() {
     </div>
   )
 }
-
-// Archivo: C:\Users\Tomoe\AGROCOLMETEO\frontend\src\app\aplicaciones\page.tsx
